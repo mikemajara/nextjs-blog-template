@@ -12,12 +12,12 @@ const mdxConfig = {
   defaultLayout: true,
   fileExtensions: ["mdx", "md"],
   remarkPlugins: [
-    // require("remark-autolink-headings"),
-    // require("remark-emoji"),
-    // require("remark-images"),
-    // require("remark-slug"),
-    // require("remark-toc"),
-    // require("remark-unwrap-images"),
+    require("remark-autolink-headings"),
+    require("remark-emoji"),
+    require("remark-images"),
+    require("remark-slug"),
+    require("remark-toc"),
+    require("remark-unwrap-images"),
   ],
   rehypePlugins: [],
   extendFrontMatter: {

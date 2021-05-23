@@ -7,10 +7,11 @@ import { Badge, Box, chakra, Flex } from "@chakra-ui/react"
 // import Footer from "components/footer"
 import Header from "@components/header"
 import PageTransition from "@components/page-transition"
+import TableOfContent from "@components/table-of-content"
 // import SEO from "components/seo"
 // import TableOfContent from "components/table-of-content"
 // import { convertBackticksToInlineCode } from "utils/convert-backticks-to-inline-code"
-// import { Heading } from "utils/get-headings"
+import { Heading } from "@utils/get-headings"
 // import PageTransition from "./page-transition"
 // import { AdBanner } from "./chakra-pro/ad-banner"
 
@@ -38,19 +39,24 @@ interface PageContainerProps {
     version?: string
   }
   children: React.ReactNode
-  // headings?: Heading[]
-  // sidebar?: any
+  headings?: Heading[]
+  sidebar?: any
   // pagination?: any
 }
 
 function PageContainer(props: PageContainerProps) {
-  const { frontmatter, children
-    // , sidebar, pagination, headings = [] 
+  const {
+    frontmatter,
+    children,
+    sidebar,
+    // pagination,
+    headings = [] 
   } = props
   useHeadingFocusOnRouteChange()
 
   const { title, description, editUrl, version } = frontmatter
-
+  console.log(`headings.length`)
+  console.log(headings.length)
   return (
     <>
       {/* <SEO title={title} description={description} />
@@ -58,7 +64,7 @@ function PageContainer(props: PageContainerProps) {
       <Header />
       <Box as="main" className="main-content" w="full" maxW="8xl" mx="auto">
         <Box display={{ md: "flex" }}>
-          {/* {sidebar || null} */}
+          {sidebar || null}
           <Box flex="1" minW="0">
             <Box id="content" px={5} mx="auto" minH="76vh">
               <Flex>
@@ -84,10 +90,10 @@ function PageContainer(props: PageContainerProps) {
                     </Box> */}
                   </PageTransition>
                 </Box>
-                {/* <TableOfContent
+                <TableOfContent
                   visibility={headings.length === 0 ? "hidden" : "initial"}
                   headings={headings}
-                /> */}
+                />
               </Flex>
             </Box>
           </Box>

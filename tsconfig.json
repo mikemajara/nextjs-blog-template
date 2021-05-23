@@ -19,8 +19,11 @@
     "target": "esnext",
     "baseUrl": ".",
     "paths": {
+      "@layouts/*": ["layouts/*"],
       "@components/*": ["src/components/*"],
-      "@layouts/*": ["layouts/*"]
+      "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"],
+      "@configs/*": ["configs/*"]
     }
   },
   "exclude": ["node_modules"],

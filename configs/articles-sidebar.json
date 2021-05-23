@@ -1,0 +1,22 @@
+{
+  "routes": [
+    {
+      "title": "Getting Started",
+      "heading": true,
+      "routes": [
+        {
+          "title": "celebration",
+          "path": "/content/celebration"
+        },
+        {
+          "title": "chapel",
+          "path": "/chapel"
+        },
+        {
+          "title": "list",
+          "path": "/content/list"
+        }
+      ]
+    }
+  ]
+}
