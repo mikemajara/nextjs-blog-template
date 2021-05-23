@@ -55,8 +55,6 @@ function PageContainer(props: PageContainerProps) {
   useHeadingFocusOnRouteChange()
 
   const { title, description, editUrl, version } = frontmatter
-  console.log(`headings.length`)
-  console.log(headings.length)
   return (
     <>
       {/* <SEO title={title} description={description} />
